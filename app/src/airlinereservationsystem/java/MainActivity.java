@@ -1,29 +1,32 @@
 package com.example.airlinereservationsystem;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.Spinner;
+import android.view.View;
+import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+
+    private TextView register;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Spinner destinationFrom = (Spinner) findViewById(R.id.spinner);
-        ArrayAdapter<String> destinationFromAdapter = new ArrayAdapter<String>(MainActivity.this,
-                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.destinationFromNames));
-        destinationFromAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        destinationFrom.setAdapter(destinationFromAdapter);
-
-        Spinner destinationTo = (Spinner) findViewById(R.id.spinner1);
-        ArrayAdapter<String> destinationToAdapter = new ArrayAdapter<String>(MainActivity.this,
-                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.destinationToNames));
-        destinationToAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        destinationTo.setAdapter(destinationToAdapter);
+        register = (TextView) findViewById(R.id.register);
+        register.setOnClickListener(this);
     }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.register:
+                startActivity(new Intent(this, RegisterUser.class));
+                break;
+        }
+    }
+
 }
