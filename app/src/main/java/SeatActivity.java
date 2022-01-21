@@ -62,8 +62,8 @@ public class SeatActivity extends AppCompatActivity {
 
                 PaymentDetail paymentDetail=new PaymentDetail(totalPriceI,totalBookedSeatsI);
 
-                FirebaseUser user=firebaseAuth.getCurrentUser();
-                databaseReference.child(user.getUid()).child("SeatDetails").setValue(paymentDetail);
+                //FirebaseUser user=firebaseAuth.getCurrentUser();
+                //databaseReference.child(user.getUid()).child("SeatDetails").setValue(paymentDetail);
 
                 Intent intent=new Intent(SeatActivity.this,PaybleActivity.class);
                 intent.putExtra("TOTALCOST",totalPriceI);
