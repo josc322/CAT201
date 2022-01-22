@@ -21,7 +21,7 @@ public class SeatActivity extends AppCompatActivity {
 
     GridLayout mainGrid;
     Double seatPrice = 50.00;
-    Double totatCost = 0.0;
+    Double totalCost = 0.0;
     int totalSeats = 0;
     TextView totalPrice;
     TextView totalBookedSeats;
@@ -39,8 +39,8 @@ public class SeatActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Select Your Favorite Seats");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        //firebaseAuth= FirebaseAuth.getInstance();
-        //databaseReference = FirebaseDatabase.getInstance().getReference();
+        firebaseAuth = FirebaseAuth.getInstance();
+        databaseReference = FirebaseDatabase.getInstance().getReference();
 
         mainGrid = (GridLayout) findViewById(R.id.mainGrid);
         totalBookedSeats = (TextView) findViewById(R.id.total_seats);
@@ -62,8 +62,8 @@ public class SeatActivity extends AppCompatActivity {
 
                 PaymentDetail paymentDetail=new PaymentDetail(totalPriceI,totalBookedSeatsI);
 
-                //FirebaseUser user=firebaseAuth.getCurrentUser();
-                //databaseReference.child(user.getUid()).child("SeatDetails").setValue(paymentDetail);
+                FirebaseUser user=firebaseAuth.getCurrentUser();
+                databaseReference.child(user.getUid()).child("SeatDetails").setValue(paymentDetail);
 
                 Intent intent=new Intent(SeatActivity.this,PaybleActivity.class);
                 intent.putExtra("TOTALCOST",totalPriceI);
@@ -93,18 +93,18 @@ public class SeatActivity extends AppCompatActivity {
                     if (cardView.getCardBackgroundColor().getDefaultColor() == -1) {
                         //Change background color
                         cardView.setCardBackgroundColor(Color.parseColor("#00FF00"));
-                        totatCost += seatPrice;
+                        totalCost += seatPrice;
                         ++totalSeats;
                         Toast.makeText(SeatActivity.this, "You Selected Seat Number :" + (finalI + 1), Toast.LENGTH_SHORT).show();
 
                     } else {
                         //Change background color
                         cardView.setCardBackgroundColor(Color.parseColor("#FFFFFF"));
-                        totatCost -= seatPrice;
+                        totalCost -= seatPrice;
                         --totalSeats;
                         Toast.makeText(SeatActivity.this, "You Unselected Seat Number :" + (finalI + 1), Toast.LENGTH_SHORT).show();
                     }
-                    totalPrice.setText("" + totatCost+"0");
+                    totalPrice.setText("" + totalCost+"0");
                     totalBookedSeats.setText("" + totalSeats);
                 }
             });
