@@ -80,7 +80,7 @@ public class AddFlight extends AppCompatActivity implements View.OnClickListener
         firebaseAuth = FirebaseAuth.getInstance();
         flightName = (EditText) findViewById(R.id.flightName);
         flightNumber = (EditText) findViewById(R.id.flightNumber);
-        cabinClass = (EditText) findViewById(R.id.cabinClass); 
+        cabinClass = (EditText) findViewById(R.id.cabinClass);
         dateFlight = (EditText) findViewById(R.id.journeyDate);
         addFlight = (Button) findViewById(R.id.addFlight);
 
@@ -106,7 +106,7 @@ public class AddFlight extends AppCompatActivity implements View.OnClickListener
     }
 
 
-    private void addBuses() {
+    private void addFlight() {
         String flightNameI = flightName.getText().toString().trim();
         String flightNumberI = flightNumber.getText().toString().trim();
         String cabinClassI = cabinClass.getText().toString().trim();
@@ -120,7 +120,7 @@ public class AddFlight extends AppCompatActivity implements View.OnClickListener
             Toast.makeText(this, "Please Enter Travels Name", Toast.LENGTH_SHORT).show();
             return;
         }
-        
+
         if (TextUtils.isEmpty(flightNumberI)) {
             Toast.makeText(this, "Please Enter Bus Number", Toast.LENGTH_SHORT).show();
             return;
@@ -130,7 +130,7 @@ public class AddFlight extends AppCompatActivity implements View.OnClickListener
             Toast.makeText(this, "Please Enter Cabin Class", Toast.LENGTH_SHORT).show();
             return;
         }
-        
+
         if (TextUtils.isEmpty(date)) {
             Toast.makeText(this, "Please Enter Journey Date", Toast.LENGTH_SHORT).show();
             return;
@@ -145,7 +145,7 @@ public class AddFlight extends AppCompatActivity implements View.OnClickListener
             return;
         }
 
-        Airline airline = new Airline(airlineId, flightNameI, flightNumberI, date, from, to);
+        Airline airline = new Airline(airlineId, flightNameI, flightNumberI, cabinClassI, date, from, to);
 
         FirebaseUser user = firebaseAuth.getCurrentUser();
         databaseReference.child("AirlineDetails").child(airlineId).setValue(airline);
@@ -163,7 +163,8 @@ public class AddFlight extends AppCompatActivity implements View.OnClickListener
     @Override
     public void onClick(View view) {
         if (view == addFlight) {
-            addBuses();
+            addFlight();
         }
     }
 }
+
