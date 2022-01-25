@@ -30,6 +30,7 @@ public class AddFlight extends AppCompatActivity implements View.OnClickListener
     //implements View.OnClickListener
     private EditText flightName;
     private EditText flightNumber;
+    private EditText cabinClass;
     private EditText dateFlight;
     private Spinner spinner1;
     private Spinner spinner2;
@@ -66,7 +67,7 @@ public class AddFlight extends AppCompatActivity implements View.OnClickListener
                 dialog.show();
             }
         });
-        
+
         mDatesetListener = new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker datePicker, int year, int month, int day) {
@@ -79,6 +80,7 @@ public class AddFlight extends AppCompatActivity implements View.OnClickListener
         firebaseAuth = FirebaseAuth.getInstance();
         flightName = (EditText) findViewById(R.id.flightName);
         flightNumber = (EditText) findViewById(R.id.flightNumber);
+        cabinClass = (EditText) findViewById(R.id.cabinClass); 
         dateFlight = (EditText) findViewById(R.id.journeyDate);
         addFlight = (Button) findViewById(R.id.addFlight);
 
@@ -107,6 +109,7 @@ public class AddFlight extends AppCompatActivity implements View.OnClickListener
     private void addBuses() {
         String flightNameI = flightName.getText().toString().trim();
         String flightNumberI = flightNumber.getText().toString().trim();
+        String cabinClassI = cabinClass.getText().toString().trim();
         String date = dateFlight.getText().toString().trim();
         String from = spinner1.getSelectedItem().toString().trim();
         String to = spinner2.getSelectedItem().toString().trim();
@@ -117,10 +120,17 @@ public class AddFlight extends AppCompatActivity implements View.OnClickListener
             Toast.makeText(this, "Please Enter Travels Name", Toast.LENGTH_SHORT).show();
             return;
         }
+        
         if (TextUtils.isEmpty(flightNumberI)) {
             Toast.makeText(this, "Please Enter Bus Number", Toast.LENGTH_SHORT).show();
             return;
         }
+
+        if (TextUtils.isEmpty(cabinClassI)) {
+            Toast.makeText(this, "Please Enter Cabin Class", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        
         if (TextUtils.isEmpty(date)) {
             Toast.makeText(this, "Please Enter Journey Date", Toast.LENGTH_SHORT).show();
             return;
