@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/destop"
+    android:orientation="vertical"
+    tools:context=".AddFlight">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+        android:text="Flight Details" />
+    
+
+    <EditText
+        android:id="@+id/flightName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_margin="15dp"
+        android:hint="Flight's Name" />
+
+    <EditText
+        android:id="@+id/flightNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_margin="15dp"
+        android:hint="Flight's Number" />
+
+    <EditText
+        android:id="@+id/cabinClass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_margin="15dp"
+        android:inputType="textPersonName"
+        android:hint="Cabin Class" />
+
+    <EditText
+        android:id="@+id/journeyDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="18dp"
+        android:layout_margin="15dp"
+        android:hint="Journey Date"
+        android:inputType="date" />
+
+    <Spinner
+        android:id="@+id/flightFrom"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:layout_margin="15dp"
+        android:textAlignment="center"
+        android:spinnerMode="dropdown"/>
+    <Spinner
+        android:id="@+id/flightTo"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:layout_margin="15dp"
+        android:textAlignment="center"
+        android:spinnerMode="dropdown"/>
+
+    <Button
+        android:id="@+id/addFlight"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:layout_height="40dp"
+        android:background="@color/i"
+        android:text="Add Flight" />
+
+
+</LinearLayout>
