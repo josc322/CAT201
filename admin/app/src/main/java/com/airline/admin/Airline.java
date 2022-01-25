@@ -3,14 +3,16 @@ package com.airline.admin;
 public class Airline {
     public String airlineId;
     public String airlineName;
+    public String airlineNumber;
     public String cabinClass;
     public String date;
     public String from;
     public String to;
 
-    public Airline(String airlineId, String airlineName, String cabinClass, String date, String from, String to) {
+    public Airline(String airlineId, String airlineName, String airlineNumber, String cabinClass, String date, String from, String to) {
         this.airlineId = airlineId;
         this.airlineName = airlineName;
+        this.airlineNumber = airlineNumber;
         this.cabinClass = cabinClass;
         this.date = date;
         this.from = from;
@@ -31,6 +33,14 @@ public class Airline {
 
     public void setAirlineName(String airlineName) {
         this.airlineName = airlineName;
+    }
+
+    public String getAirlineNumber() {
+        return airlineNumber;
+    }
+
+    public void setAirlineNumber(String airlineNumber) {
+        this.airlineNumber = airlineNumber;
     }
 
     public String getCabinClass() {
