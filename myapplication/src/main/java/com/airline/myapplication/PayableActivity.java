@@ -42,28 +42,30 @@ public class PayableActivity extends AppCompatActivity {
 
         final String nameAirline=getIntent().getStringExtra("NAME_AIRLINE");
         final String dateAirline=getIntent().getStringExtra("DATE_AIRLINE");
-        final String conditionAirline=getIntent().getStringExtra("CONDITION_AIRLINE");
+        final String cabinClassAirline=getIntent().getStringExtra("CABINCLASS_AIRLINE");
 
         a.setText(nameAirline);
         b.setText(dateAirline);
-        c.setText(conditionAirline);
+        c.setText(cabinClassAirline);
 
-        totalCost.setText("Payable : RM" + total);
-        totalSeat.setText("Number Of Seats : " + seats);
+        totalCost.setText("Payable : RM"+total);
+        totalSeat.setText("Number Of Seats : "+seats);
 
         buttonPay=(Button)findViewById(R.id.btnPay);
         buttonPay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String total_cost = totalCost.getText().toString().trim();
-                String total_seats = totalSeat.getText().toString().trim();
+
+                String total_cost=totalCost.getText().toString().trim();
+                String total_seats=totalSeat.getText().toString().trim();
 
 
                 Intent intent=new Intent(PayableActivity.this,PayActivity.class);
                 intent.putExtra("TOTALCOSTI",total_cost);
+
                 intent.putExtra("NAME_AIRLINE",nameAirline);
                 intent.putExtra("DATE_AIRLINE",dateAirline);
-                intent.putExtra("CONDITION_AIRLINE",conditionAirline);
+                intent.putExtra("CABINCLASS_AIRLINE",cabinClassAirline);
                 startActivity(intent);
             }
         });
