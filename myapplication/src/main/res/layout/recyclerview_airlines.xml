@@ -25,14 +25,12 @@
                 android:id="@+id/text_view_airlineName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="AirAsia"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
 
             <TextView
                 android:id="@+id/text_view_airlineId"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Airline ID: MAA101"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
 
 
@@ -40,21 +38,18 @@
                 android:id="@+id/text_view_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Date: 14/04/2019"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
 
             <TextView
                 android:id="@+id/text_view_from"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="From: Penang"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
 
             <TextView
                 android:id="@+id/text_view_to"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="To: Melaka"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
