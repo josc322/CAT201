@@ -32,7 +32,8 @@ public class AirlineAdapter extends RecyclerView.Adapter<AirlineAdapter.ArtistVi
     public void onBindViewHolder(@NonNull ArtistViewHolder holder, int position) {
         Airline airline = airlineList.get(position);
         holder.textViewAirlineName.setText(airline.airlineName);
-        holder.textViewAirlineID.setText("Airline ID : " + airline.airlineId);
+        holder.textViewAirlineNumber.setText("Airline Number : " + airline.airlineNumber);
+        holder.textViewAirlineCabinClass.setText("Cabin Class: " + airline.cabinClass);
         holder.textViewDate.setText("Journey Date : " + airline.date);
         holder.textViewFrom.setText("From : " + airline.from);
         holder.textViewTo.setText("To : " + airline.to);
@@ -48,13 +49,14 @@ public class AirlineAdapter extends RecyclerView.Adapter<AirlineAdapter.ArtistVi
 
     class ArtistViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
-        TextView textViewAirlineName, textViewAirlineID, textViewDate, textViewFrom,textViewTo;
+        TextView textViewAirlineName, textViewAirlineNumber, textViewAirlineCabinClass, textViewDate, textViewFrom,textViewTo;
 
         public ArtistViewHolder(@NonNull View itemView) {
             super(itemView);
 
             textViewAirlineName = itemView.findViewById(R.id.text_view_airlineName);
-            textViewAirlineID = itemView.findViewById(R.id.text_view_airlineId);
+            textViewAirlineNumber = itemView.findViewById(R.id.text_view_airlineNumber);
+            textViewAirlineCabinClass = itemView.findViewById(R.id.text_view_airlineCabinClass);
             textViewDate = itemView.findViewById(R.id.text_view_date);
             textViewFrom = itemView.findViewById(R.id.text_view_from);
             textViewTo = itemView.findViewById(R.id.text_view_to);
@@ -68,4 +70,3 @@ public class AirlineAdapter extends RecyclerView.Adapter<AirlineAdapter.ArtistVi
         }
     }
 }
-
