@@ -28,11 +28,16 @@
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
 
             <TextView
-                android:id="@+id/text_view_airlineId"
+                android:id="@+id/text_view_airlineNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
 
+            <TextView
+                android:id="@+id/text_view_airlineCabinClass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
 
             <TextView
                 android:id="@+id/text_view_date"
