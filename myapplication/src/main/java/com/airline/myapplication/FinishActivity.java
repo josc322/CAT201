@@ -41,18 +41,18 @@ public class FinishActivity extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
 
         FirebaseUser user = firebaseAuth.getCurrentUser();
-        databaseReference= FirebaseDatabase.getInstance().getReference().child(user.getUid()).child("BusBookingDetails");
+        databaseReference= FirebaseDatabase.getInstance().getReference().child(user.getUid()).child("AirlineBookingDetails");
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String airlineDetailName=dataSnapshot.child("travelsName").getValue().toString();
+                String airlineDetailName=dataSnapshot.child("airlineName").getValue().toString();
                 String airlineDetailDate=dataSnapshot.child("date").getValue().toString();
-                String airlineDetailCondition=dataSnapshot.child("Condition").getValue().toString();
+                String airlineDetailCabinClass=dataSnapshot.child("cabinClass").getValue().toString();
 
                 a.setText(airlineDetailName);
                 b.setText(airlineDetailDate);
-                c.setText(airlineDetailCondition);
+                c.setText(airlineDetailCabinClass);
             }
 
             @Override
