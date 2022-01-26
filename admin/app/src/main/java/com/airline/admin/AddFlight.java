@@ -90,13 +90,13 @@ public class AddFlight extends AppCompatActivity implements View.OnClickListener
 
         //From
         Spinner spinner1 = findViewById(R.id.flightFrom);
-        String[] items1 = new String[]{"From", "Penang", "Melaka", "Johor", "Kuala Lumpur"};
+        String[] items1 = new String[]{"From", "Penang", "Malacca", "Johor", "Kuala Lumpur"};
         ArrayAdapter<String> adapter1 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items1);
         spinner1.setAdapter(adapter1);
 
         //To
         Spinner spinner2 = findViewById(R.id.flightTo);
-        String[] items2 = new String[]{"To", "Penang", "Melaka", "Johor", "Kuala Lumpur"};
+        String[] items2 = new String[]{"To", "Penang", "Malacca", "Johor", "Kuala Lumpur"};
         ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items2);
         spinner2.setAdapter(adapter2);
 
