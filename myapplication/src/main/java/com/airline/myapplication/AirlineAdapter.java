@@ -13,12 +13,12 @@ import java.util.List;
 public class AirlineAdapter extends RecyclerView.Adapter<AirlineAdapter.ArtistViewHolder> {
 
     private Context mCtx;
-    private List<Airline> AirlineList;
+    private List<Airline> airlineList;
     private ItemClickListener clickListener;
 
-    public AirlineAdapter(Context mCtx, List<Airline> airlinesList) {
+    public AirlineAdapter(Context mCtx, List<Airline> airlineList) {
         this.mCtx = mCtx;
-        this.AirlineList = AirlineList;
+        this.airlineList = airlineList;
     }
 
     @NonNull
@@ -30,7 +30,7 @@ public class AirlineAdapter extends RecyclerView.Adapter<AirlineAdapter.ArtistVi
 
     @Override
     public void onBindViewHolder(@NonNull ArtistViewHolder holder, int position) {
-        Airline airline = AirlineList.get(position);
+        Airline airline = airlineList.get(position);
         holder.textViewAirlineName.setText(airline.airlineName);
         holder.textViewAirlineID.setText("Airline ID : " + airline.airlineId);
         holder.textViewDate.setText("Journey Date : " + airline.date);
@@ -40,7 +40,7 @@ public class AirlineAdapter extends RecyclerView.Adapter<AirlineAdapter.ArtistVi
 
     @Override
     public int getItemCount() {
-        return AirlineList.size();
+        return airlineList.size();
     }
     public void setClickListener(ItemClickListener itemClickListener) {
         this.clickListener = itemClickListener;
@@ -68,3 +68,4 @@ public class AirlineAdapter extends RecyclerView.Adapter<AirlineAdapter.ArtistVi
         }
     }
 }
+
