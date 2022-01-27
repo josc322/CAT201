@@ -57,8 +57,8 @@
             android:textSize="20dp"
             android:textStyle="bold"
             android:gravity="center"
-            android:textColor="@color/white"
-            android:background="@color/purple_200"
+            android:textColor="@color/colorAccent"
+            android:background="@color/white"
             android:text="Successfully Booked!"
             android:layout_marginTop="10dp"/>
 
