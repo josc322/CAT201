@@ -71,7 +71,7 @@
             android:shadowRadius="3"
             android:text="Search Airline"
             android:textAlignment="center"
-            android:textColor="#041E21"
+            android:textColor="@color/white"
             android:textSize="25sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
