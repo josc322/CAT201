@@ -14,15 +14,15 @@
         android:id="@+id/textViewEmailName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textStyle="bold"
-        android:text="Rasendran Inthujan"
+        android:text="Huat Chai Mao"
         android:layout_marginTop="5dp"/>
     <TextView
         android:id="@+id/textViewEmailEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:text="inthujan332@gmail.com"
+        android:textColor="@color/black"
+        android:text="huatchaimao@gmail.com"
         />
 </LinearLayout>
