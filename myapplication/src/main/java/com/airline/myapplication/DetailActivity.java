@@ -28,24 +28,28 @@ public class DetailActivity extends AppCompatActivity {
 
         getSupportActionBar().setTitle("Ticket Details");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
+        
+        //View the details of the flight
         airlineDetailName1 = (TextView)findViewById(R.id.airlineDetailName1);
         airlineNumber1 = (TextView)findViewById(R.id.airlineNumber);
         airlineCabinClass1 = (TextView)findViewById(R.id.airlineCabinClass1);
         airlineDetailDate1 = (TextView)findViewById(R.id.airlineDetailDate1);
         airlineDetailFrom1 = (TextView)findViewById(R.id.airlineDetailFrom1);
         airlineDetailTo1 = (TextView)findViewById(R.id.airlineDetailTo1);
-
+    
+        //View the booking details
         bookingDetailFrom1 = (TextView)findViewById(R.id.bookingDetailFrom1);
         bookingDetailTo1 = (TextView)findViewById(R.id.bookingDetailTo1);
 
+        //View the details of the ticket
         ticketDetailNumber1 = (TextView)findViewById(R.id.ticketDetailNumber1);
         ticketDetailPrice1 = (TextView)findViewById(R.id.ticketDetailPrice1);
 
+        //View the details of the customer
         customerDetailName1 = (TextView)findViewById(R.id.customerDetailName1);
         customerDetailEmail1 = (TextView)findViewById(R.id.customerDetailEmail1);
         customerPhone1 = (TextView)findViewById(R.id.customerDetailPhone1);
-        
+
         firebaseAuth = FirebaseAuth.getInstance();
 
         FirebaseUser user = firebaseAuth.getCurrentUser();
@@ -54,6 +58,7 @@ public class DetailActivity extends AppCompatActivity {
         databaseReference3= FirebaseDatabase.getInstance().getReference().child(user.getUid()).child("SeatDetails");
         databaseReference4= FirebaseDatabase.getInstance().getReference().child(user.getUid()).child("CustomerDetails");
 
+        //Get details of the flight from the database
         databaseReference1.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -79,11 +84,12 @@ public class DetailActivity extends AppCompatActivity {
             }
         });
 
+        //Get details of the booking from the database
         databaseReference2.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String bookingDetailFrom=dataSnapshot.child("from").getValue().toString();
-                String bookingDetailTo=dataSnapshot.child("to").getValue().toString();
+                String bookingDetailFrom = dataSnapshot.child("from").getValue().toString();
+                String bookingDetailTo = dataSnapshot.child("to").getValue().toString();
 
                 bookingDetailFrom1.setText(" From            :  "+bookingDetailFrom);
                 bookingDetailTo1.setText(" To                 :  "+bookingDetailTo);
@@ -95,11 +101,12 @@ public class DetailActivity extends AppCompatActivity {
             }
         });
 
+        //Get details of the ticket from the database
         databaseReference3.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String ticketDetailNumber=dataSnapshot.child("total_seats").getValue().toString();
-                String ticketDetailPrice=dataSnapshot.child("total_cost").getValue().toString();
+                String ticketDetailNumber = dataSnapshot.child("total_seats").getValue().toString();
+                String ticketDetailPrice = dataSnapshot.child("total_cost").getValue().toString();
 
                 ticketDetailNumber1.setText(" Number of Seats    :  "+ticketDetailNumber);
                 ticketDetailPrice1.setText(" Total Cost                :  "+ticketDetailPrice);
@@ -111,6 +118,7 @@ public class DetailActivity extends AppCompatActivity {
             }
         });
 
+        //Get details of the customer from the database
         databaseReference4.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
