@@ -17,7 +17,10 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class CancelActivity extends AppCompatActivity {
-    private TextView a,b,c,d,e,f,g,h,i,j,k,l;
+    private TextView airlineDetailName1, airlineNumber1, airlineDetailDate1, airlineDetailFrom1, airlineDetailTo1, airlineCabinClass1;
+    private TextView bookingDetailFrom1, bookingDetailTo1;
+    private TextView ticketDetailNumber1, ticketDetailPrice1;
+    private TextView customerDetailName1, customerDetailEmail1,customerPhone1;
     private DatabaseReference databaseReference1,databaseReference2,databaseReference3,databaseReference4;
     private FirebaseAuth firebaseAuth;
     private Button cancelBooking;
@@ -30,28 +33,30 @@ public class CancelActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Cancel Booking");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        cancelBooking=(Button)findViewById(R.id.cancelBooking);
+        cancelBooking = (Button)findViewById(R.id.cancelBooking);
 
-        a=(TextView)findViewById(R.id.airlineDetailName1);
-        b=(TextView)findViewById(R.id.airlineDetailDate1);
-        c=(TextView)findViewById(R.id.airlineDetailFrom1);
-        d=(TextView)findViewById(R.id.airlineDetailTo1);
-        e=(TextView)findViewById(R.id.airlineDetailCondition1);
+        airlineDetailName1 = (TextView)findViewById(R.id.airlineDetailName1);
+        airlineNumber1 = (TextView)findViewById(R.id.airlineNumber);
+        airlineCabinClass1 = (TextView)findViewById(R.id.airlineCabinClass1);
+        airlineDetailDate1 = (TextView)findViewById(R.id.airlineDetailDate1);
+        airlineDetailFrom1 = (TextView)findViewById(R.id.airlineDetailFrom1);
+        airlineDetailTo1 = (TextView)findViewById(R.id.airlineDetailTo1);
 
-        f=(TextView)findViewById(R.id.bookingDetailFrom1);
-        g=(TextView)findViewById(R.id.bookingDetailTo1);
+        bookingDetailFrom1 = (TextView)findViewById(R.id.bookingDetailFrom1);
+        bookingDetailTo1 = (TextView)findViewById(R.id.bookingDetailTo1);
 
-        h=(TextView)findViewById(R.id.ticketDetailNumber1);
-        i=(TextView)findViewById(R.id.ticketDetailPrice1);
+        ticketDetailNumber1 = (TextView)findViewById(R.id.ticketDetailNumber1);
+        ticketDetailPrice1 = (TextView)findViewById(R.id.ticketDetailPrice1);
 
-        j=(TextView)findViewById(R.id.customerDetailName1);
-        k=(TextView)findViewById(R.id.customerDetailEmail1);
-        l=(TextView)findViewById(R.id.customerDetailPhone1);
+        customerDetailName1 = (TextView)findViewById(R.id.customerDetailName1);
+        customerDetailEmail1 = (TextView)findViewById(R.id.customerDetailEmail1);
+        customerPhone1 = (TextView)findViewById(R.id.customerDetailPhone1);
+
         firebaseAuth = FirebaseAuth.getInstance();
 
 
         FirebaseUser user = firebaseAuth.getCurrentUser();
-        databaseReference1= FirebaseDatabase.getInstance().getReference().child(user.getUid()).child("BusBookingDetails");
+        databaseReference1= FirebaseDatabase.getInstance().getReference().child(user.getUid()).child("AirlineBookingDetails");
         databaseReference2= FirebaseDatabase.getInstance().getReference().child(user.getUid()).child("BookingDetails");
         databaseReference3= FirebaseDatabase.getInstance().getReference().child(user.getUid()).child("SeatDetails");
         databaseReference4= FirebaseDatabase.getInstance().getReference().child(user.getUid()).child("CustomerDetails");
@@ -59,17 +64,20 @@ public class CancelActivity extends AppCompatActivity {
         databaseReference1.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String busDetailName=dataSnapshot.child("travelsName").getValue().toString();
-                String busDetailDate=dataSnapshot.child("date").getValue().toString();
-                String busDetailFrom=dataSnapshot.child("from").getValue().toString();
-                String busDetailTo=dataSnapshot.child("to").getValue().toString();
-                String busDetailCondition=dataSnapshot.child("busCondition").getValue().toString();
+                String airlineDetailName = dataSnapshot.child("airlineName").getValue().toString();
+                String airlineNumber = dataSnapshot.child("airlineNumber").getValue().toString();
+                String airlineCabinClass = dataSnapshot.child("cabinClass").getValue().toString();
+                String airlineDetailDate = dataSnapshot.child("date").getValue().toString();
+                String airlineDetailFrom = dataSnapshot.child("from").getValue().toString();
+                String airlineDetailTo = dataSnapshot.child("to").getValue().toString();
 
-                a.setText(""+busDetailName);
-                b.setText(" Date              :  "+busDetailDate);
-                c.setText(" From             :  "+busDetailFrom);
-                d.setText(" To                  :  "+busDetailTo);
-                e.setText(" Condition     :  "+busDetailCondition);
+
+                airlineDetailName1.setText("" + airlineDetailName);
+                airlineNumber1.setText(" Airline Number     : " + airlineNumber);
+                airlineDetailDate1.setText(" Cabin Class     :  " + airlineCabinClass);
+                airlineDetailFrom1.setText(" Date              :  " + airlineDetailDate);
+                airlineDetailTo1.setText(" From             :  " + airlineDetailFrom);
+                airlineCabinClass1.setText(" To                  :  " + airlineDetailTo);
             }
 
             @Override
@@ -85,8 +93,8 @@ public class CancelActivity extends AppCompatActivity {
                 String bookingDetailFrom=dataSnapshot.child("from").getValue().toString();
                 String bookingDetailTo=dataSnapshot.child("to").getValue().toString();
 
-                f.setText(" From            :  "+bookingDetailFrom);
-                g.setText(" To                 :  "+bookingDetailTo);
+                bookingDetailFrom1.setText(" From            :  "+bookingDetailFrom);
+                bookingDetailTo1.setText(" To                 :  "+bookingDetailTo);
             }
 
             @Override
@@ -102,8 +110,8 @@ public class CancelActivity extends AppCompatActivity {
                 String ticketDetailNumber=dataSnapshot.child("total_seats").getValue().toString();
                 String ticketDetailPrice=dataSnapshot.child("total_cost").getValue().toString();
 
-                h.setText(" Number of Seats    :  "+ticketDetailNumber);
-                i.setText(" Total Cost                :  "+ticketDetailPrice);
+                ticketDetailNumber1.setText(" Number of Seats    :  "+ticketDetailNumber);
+                ticketDetailPrice1.setText(" Total Cost                :  "+ticketDetailPrice);
             }
 
             @Override
@@ -116,13 +124,13 @@ public class CancelActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                String customerDetailName=dataSnapshot.child("cus_name").getValue().toString();
-                String customerDetailEmail1=dataSnapshot.child("cus_email").getValue().toString();
-                String customerDetailPhone=dataSnapshot.child("cus_phone").getValue().toString();
+                String customerDetailName = dataSnapshot.child("cus_name").getValue().toString();
+                String customerDetailEmail = dataSnapshot.child("cus_email").getValue().toString();
+                String customerDetailPhone = dataSnapshot.child("cus_phone").getValue().toString();
 
-                j.setText(" Customer_Name      :  "+customerDetailName);
-                k.setText(" Customer_Email       :  "+customerDetailEmail1);
-                l.setText(" Customer_Phone     :  "+customerDetailPhone);
+                customerDetailName1.setText(" Customer_Name      :  " + customerDetailName);
+                customerDetailEmail1.setText(" Customer_Email       :  " + customerDetailEmail);
+                customerPhone1.setText(" Customer_Phone     :  " + customerDetailPhone);
 
             }
 
@@ -140,8 +148,8 @@ public class CancelActivity extends AppCompatActivity {
                 databaseReferenceA.removeValue();
 
                 startActivity(new Intent(getApplicationContext(),NavigationActivity.class));
-
             }
         });
     }
 }
+
