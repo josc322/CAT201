@@ -9,6 +9,10 @@ public class Airline {
     public String from;
     public String to;
 
+    public Airline(){
+
+    }
+
     public Airline(String airlineId, String airlineName, String airlineNumber, String cabinClass, String date, String from, String to) {
         this.airlineId = airlineId;
         this.airlineName = airlineName;

@@ -36,7 +36,7 @@ public class ViewAirlineActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_airline);
 
-        getSupportActionBar().setTitle("All Bus Details");
+        getSupportActionBar().setTitle("All Airline Details");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         airlineList = new ArrayList<>();
@@ -44,7 +44,7 @@ public class ViewAirlineActivity extends AppCompatActivity {
 
         listViewAirlines = (ListView) findViewById(R.id.listViewAirlineDetails);
         databaseFlights = FirebaseDatabase.getInstance().getReference();
-        FirebaseDatabase.getInstance().getReference("FlightDetails")
+        FirebaseDatabase.getInstance().getReference("AirlineDetails")
                 .addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -98,7 +98,8 @@ public class ViewAirlineActivity extends AppCompatActivity {
         final EditText editDate = (EditText)dialogView.findViewById(R.id.editTextJourneyDate);
         final EditText editFromAirline = (EditText) findViewById(R.id.editTextAirlineFrom);
         final EditText editToAirline = (EditText) findViewById(R.id.editTextAirlineTo);
-
+//        final EditText editTimeFrom = (EditText) findViewById(R.id.editTextAirlineTimeFrom);
+//        final EditText editTimeReach = (EditText) findViewById(R.id.editTextAirlineTimeReach);
         final Button buttonUpdate = (Button)dialogView.findViewById(R.id.buttonUpdate);
         final Button buttonDelete = (Button)dialogView.findViewById(R.id.buttonDelete);
 
@@ -117,7 +118,8 @@ public class ViewAirlineActivity extends AppCompatActivity {
                 String airline_4 = editDate.getText().toString().trim();
                 String airline_5 = editFromAirline.getText().toString();
                 String airline_6 = editToAirline.getText().toString();
-
+//                String airline_7 = editTimeFrom.getText().toString();
+//                String airline_8 = editTimeReach.getText().toString();
 
                 updateFlightDetail(airlineId,airline_1, airline_2, airline_3, airline_4, airline_5, airline_6);
                 alertDialog.dismiss();
@@ -135,7 +137,7 @@ public class ViewAirlineActivity extends AppCompatActivity {
 
     }
     private void deleteFlight(String airlineId){
-        DatabaseReference drTravellingPath =FirebaseDatabase.getInstance().getReference("AirlineDetails").child(airlineId);
+        DatabaseReference drTravellingPath = FirebaseDatabase.getInstance().getReference("AirlineDetails").child(airlineId);
 
         drTravellingPath.removeValue();
 

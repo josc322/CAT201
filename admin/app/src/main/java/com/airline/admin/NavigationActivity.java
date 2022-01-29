@@ -75,9 +75,8 @@ public class NavigationActivity extends AppCompatActivity implements NavigationV
                 Intent h = new Intent(NavigationActivity.this, NavigationActivity.class);
                 startActivity(h);
                 break;
-            case R.id.cancel:
-                Intent c = new Intent(NavigationActivity.this, CancelFlight.class);
-                startActivity(c);
+            case R.id.send:
+                Intent m = new Intent(NavigationActivity.this, SendEmail.class);
                 break;
             case R.id.logout:
                 firebaseAuth.signOut();

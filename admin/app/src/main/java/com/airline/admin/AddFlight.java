@@ -8,7 +8,6 @@ import android.graphics.drawable.ColorDrawable;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -50,7 +49,7 @@ public class AddFlight extends AppCompatActivity implements View.OnClickListener
         getSupportActionBar().setTitle("Add Flights");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        mDisplayDate = (TextView) findViewById(R.id.journeyDate);
+        mDisplayDate = (TextView) findViewById(R.id.travelDate);
         mDisplayDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -81,7 +80,7 @@ public class AddFlight extends AppCompatActivity implements View.OnClickListener
         flightName = (EditText) findViewById(R.id.flightName);
         flightNumber = (EditText) findViewById(R.id.flightNumber);
         cabinClass = (EditText) findViewById(R.id.cabinClass);
-        dateFlight = (EditText) findViewById(R.id.journeyDate);
+        dateFlight = (EditText) findViewById(R.id.travelDate);
         addFlight = (Button) findViewById(R.id.addFlight);
 
         spinner1 = (Spinner) findViewById(R.id.flightFrom);
@@ -113,7 +112,6 @@ public class AddFlight extends AppCompatActivity implements View.OnClickListener
         String date = dateFlight.getText().toString().trim();
         String from = spinner1.getSelectedItem().toString().trim();
         String to = spinner2.getSelectedItem().toString().trim();
-
         String airlineId = databaseReference.push().getKey();
 
         if (TextUtils.isEmpty(flightNameI)) {
