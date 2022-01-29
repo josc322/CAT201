@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="map_key" translatable="false">AIzaSyCu9GWIdZoDplS4tbFa9BcIXi9NIKzkaTk</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string-array name="Airline_Names">
+        <item>MAS AIRLINES</item>
+        <item>FIREFLY</item>
+        <item>AIR ASIA</item>
+        <item>MALINDO AIR</item>
+        </string-array>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+
+</resources>
