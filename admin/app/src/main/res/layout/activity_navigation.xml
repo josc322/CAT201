@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer"
-    android:background="@drawable/destop"
+    android:background="@drawable/purple_background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".NavigationActivity">
@@ -13,69 +13,36 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="ADMIN PANEL"
-            android:gravity="center"
-            android:textSize="25dp"
-            android:textStyle="bold"/>
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="180dp"
-            app:srcCompat="@drawable/icone2" />
+            app:srcCompat="@drawable/logo" />
 
 
         <Button
             android:id="@+id/btnAirline"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
             android:textSize="20dp"
-            android:text="Add Flights" />
-
-        <Button
-            android:id="@+id/btnCustomer"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:textSize="20dp"
-            android:text="Add Customer"/>
-
-        <Button
-            android:id="@+id/btnLocation"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:textSize="20dp"
-            android:text="Add Location" />
-
-        <Button
-            android:id="@+id/btnPlace"
-            android:layout_width="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_height="50dp"
-            android:textSize="20dp"
-            android:text="Add Place" />
+            android:text="Add Flights"
+            android:background="@drawable/button"
+            android:textColor="@color/white"/>
 
         <Button
             android:id="@+id/btnSeat"
             android:layout_width="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="50dp"
             android:layout_height="50dp"
             android:textSize="20dp"
-            android:text="Send Email" />
+            android:text="Send Email"
+            android:background="@drawable/button"
+            android:textColor="@color/white"/>
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView

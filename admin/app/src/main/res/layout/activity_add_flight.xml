@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/destop"
+    android:background="@drawable/purple_background"
     android:orientation="vertical"
     tools:context=".AddFlight">
 
@@ -17,7 +17,9 @@
         android:textSize="25sp"
         android:textStyle="bold"
         android:layout_margin="10dp"
-        android:text="Flight Details" />
+        android:text="Flight Details"
+        android:textColor="@color/white"
+        android:background="#040273"/>
 
 
     <EditText
@@ -48,40 +50,48 @@
         android:hint="Cabin Class" />
 
     <EditText
-        android:id="@+id/journeyDate"
+        android:id="@+id/travelDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:textSize="18dp"
         android:layout_margin="15dp"
-        android:hint="Journey Date"
+        android:hint="Travel Date"
         android:inputType="date" />
 
     <Spinner
         android:id="@+id/flightFrom"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:ems="10"
+        android:layout_height="58dp"
         android:layout_margin="15dp"
-        android:textAlignment="center"
-        android:spinnerMode="dropdown"/>
+        android:background="@android:drawable/btn_dropdown"
+        android:ems="10"
+        android:hint="From"
+        android:spinnerMode="dropdown"
+        android:textAlignment="center" />
+
     <Spinner
         android:id="@+id/flightTo"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:ems="10"
+        android:layout_height="58dp"
         android:layout_margin="15dp"
-        android:textAlignment="center"
-        android:spinnerMode="dropdown"/>
+        android:background="@android:drawable/btn_dropdown"
+        android:ems="10"
+        android:hint="To"
+        android:spinnerMode="dropdown"
+        android:textAlignment="center" />
+
 
     <Button
         android:id="@+id/addFlight"
-        android:padding="10dp"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:layout_height="40dp"
-        android:background="@color/i"
-        android:text="Add Flight" />
+        android:background="@drawable/button"
+        android:padding="10dp"
+        android:text="Add Flight"
+        android:textSize="25dp"
+        android:textColor="@color/white"/>
 
 
 </LinearLayout>

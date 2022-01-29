@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/destop"
+    android:background="@drawable/purple_background"
     tools:context=".Register"
     tools:layout_editor_absoluteY="81dp">
 
@@ -16,25 +16,30 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="134dp">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="ADMIN PANEL"
-            android:gravity="center"
-            android:textSize="25dp"
-            android:textStyle="bold"/>
-
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:src="@drawable/icone2"
+            android:src="@drawable/logo"
             android:layout_margin="15dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:background="#040273"
+            android:gravity="center"
+            android:text="ADMIN PANEL"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
         <EditText
             android:id="@+id/editTextEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:background="@drawable/background"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/select"
             android:ems="10"
             android:fontFamily="serif"
             android:hint="Enter your email"
@@ -50,8 +55,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:background="@drawable/background"
+            android:background="@drawable/select"
             android:ems="10"
+            android:layout_marginTop="20dp"
             android:fontFamily="serif"
             android:hint="Enter your password"
             android:inputType="textPassword"
@@ -64,11 +70,13 @@
             android:id="@+id/button"
             android:layout_width="269dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/back2"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="60dp"
+            android:background="@drawable/button"
             android:text="Register"
             android:textAlignment="center"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -78,7 +86,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:padding="20px"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/white"
             android:text="Already Registered? Sign In Here."
             android:textAlignment="center"
             android:textSize="18sp"/>

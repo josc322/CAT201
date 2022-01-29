@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:background="@drawable/destop"
+    android:background="@drawable/purple_background"
     android:layout_height="match_parent">
 
     <EditText
@@ -56,23 +56,24 @@
 
     <Button
         android:id="@+id/buttonUpdate"
-        android:padding="10dp"
         android:layout_width="match_parent"
-        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
         android:layout_marginRight="30dp"
-        android:layout_height="40dp"
-        android:background="@color/i"
+        android:background="#ff00ff"
+        android:padding="10dp"
         android:text="Update" />
+
     <Button
         android:id="@+id/buttonDelete"
-        android:padding="10dp"
         android:layout_width="match_parent"
-        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="30dp"
-        android:layout_height="40dp"
-        android:background="@color/i"
+        android:background="#ff00ff"
+        android:padding="10dp"
         android:text="Delete" />
 
 </LinearLayout>

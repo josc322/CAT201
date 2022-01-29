@@ -9,7 +9,7 @@
         android:id="@+id/busImage"
         android:layout_width="135dp"
         android:layout_height="150dp"
-        app:srcCompat="@drawable/sutha" />
+        app:srcCompat="@drawable/airplane" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -61,6 +61,5 @@
             android:layout_height="wrap_content"
             android:text="To: Melaka"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
-
     </LinearLayout>
 </RelativeLayout>
