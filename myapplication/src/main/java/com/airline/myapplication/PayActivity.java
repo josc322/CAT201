@@ -25,7 +25,6 @@ public class PayActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Pay Information");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        buttonOffer = (Button) findViewById(R.id.buttonOffer);
         buttonCredit = (Button) findViewById(R.id.buttonCredit);
         buttonDebit = (Button) findViewById(R.id.buttonDebit);
         buttonOnlineBanking = (Button) findViewById(R.id.buttonOnlineBanking);
@@ -46,18 +45,6 @@ public class PayActivity extends AppCompatActivity {
 
         String total=getIntent().getStringExtra("TOTALCOSTI");
         textViewTotal.setText(total);
-
-        buttonOffer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent intent=new Intent(PayActivity.this,CreditActivity.class);
-                intent.putExtra("NAME_AIRLINE",nameAirline);
-                intent.putExtra("DATE_AIRLINE",dateAirline);
-                intent.putExtra("CABINCLASS_AIRLINE",cabinClassAirline);
-                startActivity(intent);
-            }
-        });
 
         buttonCredit.setOnClickListener(new View.OnClickListener() {
             @Override

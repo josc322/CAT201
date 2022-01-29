@@ -36,7 +36,7 @@ public class CancelActivity extends AppCompatActivity {
         cancelBooking = (Button)findViewById(R.id.cancelBooking);
 
         airlineDetailName1 = (TextView)findViewById(R.id.airlineDetailName1);
-        airlineNumber1 = (TextView)findViewById(R.id.airlineNumber);
+        airlineNumber1 = (TextView)findViewById(R.id.airlineNumber1);
         airlineCabinClass1 = (TextView)findViewById(R.id.airlineCabinClass1);
         airlineDetailDate1 = (TextView)findViewById(R.id.airlineDetailDate1);
         airlineDetailFrom1 = (TextView)findViewById(R.id.airlineDetailFrom1);
@@ -106,7 +106,6 @@ public class CancelActivity extends AppCompatActivity {
         databaseReference3.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
                 String ticketDetailNumber=dataSnapshot.child("total_seats").getValue().toString();
                 String ticketDetailPrice=dataSnapshot.child("total_cost").getValue().toString();
 
@@ -128,9 +127,9 @@ public class CancelActivity extends AppCompatActivity {
                 String customerDetailEmail = dataSnapshot.child("cus_email").getValue().toString();
                 String customerDetailPhone = dataSnapshot.child("cus_phone").getValue().toString();
 
-                customerDetailName1.setText(" Customer_Name      :  " + customerDetailName);
-                customerDetailEmail1.setText(" Customer_Email       :  " + customerDetailEmail);
-                customerPhone1.setText(" Customer_Phone     :  " + customerDetailPhone);
+                customerDetailName1.setText(" Customer's Name      :  " + customerDetailName);
+                customerDetailEmail1.setText(" Customer's Email       :  " + customerDetailEmail);
+                customerPhone1.setText(" Customer's Phone     :  " + customerDetailPhone);
 
             }
 
@@ -143,13 +142,12 @@ public class CancelActivity extends AppCompatActivity {
         cancelBooking.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FirebaseUser user1 = firebaseAuth.getCurrentUser();
-                DatabaseReference databaseReferenceA= FirebaseDatabase.getInstance().getReference().child(user1.getUid());
+                FirebaseUser user = firebaseAuth.getCurrentUser();
+                DatabaseReference databaseReferenceA= FirebaseDatabase.getInstance().getReference().child(user.getUid());
                 databaseReferenceA.removeValue();
 
-                startActivity(new Intent(getApplicationContext(),NavigationActivity.class));
+                startActivity(new Intent(getApplicationContext(), NavigationActivity.class));
             }
         });
     }
 }
-

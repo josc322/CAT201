@@ -53,27 +53,24 @@ public class EventActivity extends AppCompatActivity implements View.OnClickList
             @Override
             public void onRatingChanged(RatingBar ratingBar, float v, boolean b) {
                 int rating=(int)v;
-                String message=null;
+                String message = "";
                 myRating=ratingBar.getRating();
 
                 switch (rating){
                     case 1:
-                        message="Thank You For Your Feedback";
+                        message = "Thanks for the feedback!";
                         break;
                     case 2:
-                        message="Thank You For Your Feedback";
+                        message = "Thanks for the feedback!";
                         break;
                     case 3:
-                        message="Thank You For Your Feedback";
+                        message = "Thanks for the feedback!";
                         break;
                     case 4:
-                        message="Thank You For Your Feedback";
+                        message = "Thanks for the feedback!";
                         break;
                     case 5:
-                        message="Thank You For Your Feedback";
-                        break;
-                    default:
-                        message="Thamk You For Your Feedback";
+                        message = "TThanks for the feedback!";
                         break;
                 }
                 Toast.makeText(EventActivity.this,String.valueOf(myRating),Toast.LENGTH_SHORT).show();
@@ -85,11 +82,8 @@ public class EventActivity extends AppCompatActivity implements View.OnClickList
 
         String ratingNumber = String.valueOf(ratingBar.getRating());
 
-
-
         if (TextUtils.isEmpty(ratingNumber)) {
-            //password is empty
-            Toast.makeText(this, "Please select the Rating value", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please select the rating value", Toast.LENGTH_SHORT).show();
             return;
         }
 

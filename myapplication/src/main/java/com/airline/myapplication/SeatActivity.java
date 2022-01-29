@@ -20,7 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class SeatActivity extends AppCompatActivity {
 
     GridLayout mainGrid;
-    Double seatPrice = 50.00;
+    Double seatPrice = 68.00;
     Double totalCost = 0.0;
     int totalSeats = 0;
     TextView totalPrice;
@@ -36,7 +36,7 @@ public class SeatActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seat);
 
-        getSupportActionBar().setTitle("Select Your Favorite Seats");
+        getSupportActionBar().setTitle("Select Your Seat");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         firebaseAuth = FirebaseAuth.getInstance();
@@ -49,20 +49,20 @@ public class SeatActivity extends AppCompatActivity {
 
         //Set Event
         setToggleEvent(mainGrid);
-        final String nameAirline=getIntent().getStringExtra("NAME_AIRLINE");
-        final String dateAirline=getIntent().getStringExtra("DATE_AIRLINE");
-        final String conditionAirline=getIntent().getStringExtra("CONDITION_AIRLINE");
+        final String nameAirline = getIntent().getStringExtra("NAME_AIRLINE");
+        final String dateAirline = getIntent().getStringExtra("DATE_AIRLINE");
+        final String cabinclassAirline = getIntent().getStringExtra("CABINCLASS_AIRLINE");
 
         buttonBook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                String totalPriceI=totalPrice.getText().toString().trim();
-                String totalBookedSeatsI=totalBookedSeats.getText().toString().trim();
+                String totalPriceI = totalPrice.getText().toString().trim();
+                String totalBookedSeatsI = totalBookedSeats.getText().toString().trim();
 
-                PaymentDetail paymentDetail=new PaymentDetail(totalPriceI,totalBookedSeatsI);
+                PaymentDetail paymentDetail = new PaymentDetail(totalPriceI,totalBookedSeatsI);
 
-                FirebaseUser user=firebaseAuth.getCurrentUser();
+                FirebaseUser user = firebaseAuth.getCurrentUser();
                 databaseReference.child(user.getUid()).child("SeatDetails").setValue(paymentDetail);
 
                 Intent intent=new Intent(SeatActivity.this,PayableActivity.class);
@@ -71,10 +71,9 @@ public class SeatActivity extends AppCompatActivity {
 
                 intent.putExtra("NAME_AIRLINE",nameAirline);
                 intent.putExtra("DATE_AIRLINE",dateAirline);
-                intent.putExtra("CONDITION_AIRLINE",conditionAirline);
+                intent.putExtra("CABINCLASS_AIRLINE",cabinclassAirline);
 
                 startActivity(intent);
-
             }
         });
 
@@ -82,23 +81,21 @@ public class SeatActivity extends AppCompatActivity {
 
 
     private void setToggleEvent(GridLayout mainGrid) {
-        //Loop all child item of Main Grid
         for (int i = 0; i < mainGrid.getChildCount(); i++) {
-            //You can see , all child item is CardView , so we just cast object to CardView
             final CardView cardView = (CardView) mainGrid.getChildAt(i);
             final int finalI = i;
             cardView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     if (cardView.getCardBackgroundColor().getDefaultColor() == -1) {
-                        //Change background color
+                        //Change the seat color when it is selected
                         cardView.setCardBackgroundColor(Color.parseColor("#00FF00"));
                         totalCost += seatPrice;
                         ++totalSeats;
                         Toast.makeText(SeatActivity.this, "You Selected Seat Number :" + (finalI + 1), Toast.LENGTH_SHORT).show();
 
                     } else {
-                        //Change background color
+                        //Change the color of the seat when it is unselected
                         cardView.setCardBackgroundColor(Color.parseColor("#FFFFFF"));
                         totalCost -= seatPrice;
                         --totalSeats;

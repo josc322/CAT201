@@ -33,9 +33,9 @@ public class FinishActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Booking  Finished");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        a=(TextView)findViewById(R.id.textView11);
-        b=(TextView)findViewById(R.id.textView21);
-        c=(TextView)findViewById(R.id.textView31);
+        a=(TextView)findViewById(R.id.airlineName2);
+        b=(TextView)findViewById(R.id.airlineDate2);
+        c=(TextView)findViewById(R.id.airlineCabinClass2);
         buttonHome=(Button)findViewById(R.id.btnHome);
 
         firebaseAuth = FirebaseAuth.getInstance();
@@ -65,21 +65,6 @@ public class FinishActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String message="Your Ticket Booking Success";
-                NotificationCompat.Builder builder=new NotificationCompat.Builder(FinishActivity.this)
-                        .setSmallIcon(R.drawable.detail)
-                        .setContentTitle("New Notification")
-                        .setContentText(message)
-                        .setAutoCancel(true);
-                Intent intent=new Intent(FinishActivity.this,NotificationActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                intent.putExtra("message",message);
-
-                PendingIntent pendingIntent=PendingIntent.getActivity(FinishActivity.this,0,intent,PendingIntent.FLAG_UPDATE_CURRENT);
-                builder.setContentIntent(pendingIntent);
-
-                NotificationManager notificationManager=(NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
-
-                notificationManager.notify(0,builder.build());
                 startActivity(new Intent(getApplicationContext(), NavigationActivity.class));
             }
         });

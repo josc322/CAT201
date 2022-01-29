@@ -61,7 +61,7 @@ public class AirlineActivity extends AppCompatActivity implements ItemClickListe
 
         String fromAirline=getIntent().getStringExtra("FROM_AIRLINE");
         final String toAirline = getIntent().getStringExtra("TO_AIRLINE");
-        final String dateAirline=getIntent().getStringExtra("DATE_AIRLINE");
+        final String dateAirline = getIntent().getStringExtra("DATE_AIRLINE");
 
         FirebaseDatabase.getInstance().getReference("AirlineDetails")
                 .orderByChild("from")
@@ -112,7 +112,6 @@ public class AirlineActivity extends AppCompatActivity implements ItemClickListe
     }
 
 
-
     ValueEventListener valueEventListener = new ValueEventListener() {
         @Override
         public void onDataChange(DataSnapshot dataSnapshot) {
@@ -135,14 +134,15 @@ public class AirlineActivity extends AppCompatActivity implements ItemClickListe
     public void onClick(View view, int position) {
         Airline airline = airlinesList.get(position);
 
-        String airlineId=airline.getAirlineId();
+        String airlineId = airline.getAirlineId();
         String airlineName=airline.getAirlineName();
-        String cabinClass=airline.getCabinClass();
-        String date=airline.getDate();
-        String from=airline.getFrom();
-        String to=airline.getTo();
+        String airlineNumber = airline.getAirlineNumber();
+        String cabinClass = airline.getCabinClass();
+        String date = airline.getDate();
+        String from = airline.getFrom();
+        String to = airline.getTo();
 
-        Airline airlineDetail = new Airline(airlineId,airlineName,cabinClass,date,from,to);
+        Airline airlineDetail = new Airline(airlineId,airlineName, airlineNumber, cabinClass,date,from,to);
         FirebaseUser user1=firebaseAuth.getCurrentUser();
         databaseReference.child(user1.getUid()).child("AirlineBookingDetails").setValue(airlineDetail);
 

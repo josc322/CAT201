@@ -17,7 +17,7 @@ public class PayableActivity extends AppCompatActivity {
     private Button buttonPay;
     TextView totalCost;
     TextView totalSeat;
-    private TextView a,b,c;
+    private TextView airlineName,airlineDate,airlineCabinClass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,12 +30,12 @@ public class PayableActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("You Can Pay");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        a=(TextView)findViewById(R.id.textView11);
-        b=(TextView)findViewById(R.id.textView21);
-        c=(TextView)findViewById(R.id.textView31);
+        airlineName = (TextView)findViewById(R.id.airlineName2);
+        airlineDate = (TextView)findViewById(R.id.airlineDate2);
+        airlineCabinClass = (TextView)findViewById(R.id.airlineCabinClass2);
 
-        totalCost=(TextView)findViewById(R.id.totalCostFinal);
-        totalSeat=(TextView)findViewById(R.id.totalSeatsFinal);
+        totalCost = (TextView)findViewById(R.id.totalCostFinal);
+        totalSeat = (TextView)findViewById(R.id.totalSeatsFinal);
 
         final String total=getIntent().getStringExtra("TOTALCOST");
         final String seats=getIntent().getStringExtra("TOTALSEAT");
@@ -44,20 +44,20 @@ public class PayableActivity extends AppCompatActivity {
         final String dateAirline=getIntent().getStringExtra("DATE_AIRLINE");
         final String cabinClassAirline=getIntent().getStringExtra("CABINCLASS_AIRLINE");
 
-        a.setText(nameAirline);
-        b.setText(dateAirline);
-        c.setText(cabinClassAirline);
+        airlineName.setText(nameAirline);
+        airlineDate.setText(dateAirline);
+        airlineCabinClass.setText(cabinClassAirline);
 
-        totalCost.setText("Payable : RM"+total);
+        totalCost.setText("You Should Pay : RM"+total);
         totalSeat.setText("Number Of Seats : "+seats);
 
-        buttonPay=(Button)findViewById(R.id.btnPay);
+        buttonPay = (Button)findViewById(R.id.payButton);
         buttonPay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                String total_cost=totalCost.getText().toString().trim();
-                String total_seats=totalSeat.getText().toString().trim();
+                String total_cost = totalCost.getText().toString().trim();
+                String total_seats = totalSeat.getText().toString().trim();
 
 
                 Intent intent=new Intent(PayableActivity.this,PayActivity.class);

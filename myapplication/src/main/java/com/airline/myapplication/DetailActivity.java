@@ -28,15 +28,15 @@ public class DetailActivity extends AppCompatActivity {
 
         getSupportActionBar().setTitle("Ticket Details");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        
+
         //View the details of the flight
         airlineDetailName1 = (TextView)findViewById(R.id.airlineDetailName1);
-        airlineNumber1 = (TextView)findViewById(R.id.airlineNumber);
+        airlineNumber1 = (TextView)findViewById(R.id.airlineNumber1);
         airlineCabinClass1 = (TextView)findViewById(R.id.airlineCabinClass1);
         airlineDetailDate1 = (TextView)findViewById(R.id.airlineDetailDate1);
         airlineDetailFrom1 = (TextView)findViewById(R.id.airlineDetailFrom1);
         airlineDetailTo1 = (TextView)findViewById(R.id.airlineDetailTo1);
-    
+
         //View the booking details
         bookingDetailFrom1 = (TextView)findViewById(R.id.bookingDetailFrom1);
         bookingDetailTo1 = (TextView)findViewById(R.id.bookingDetailTo1);
@@ -126,9 +126,9 @@ public class DetailActivity extends AppCompatActivity {
                 String customerDetailEmail = dataSnapshot.child("cus_email").getValue().toString();
                 String customerDetailPhone = dataSnapshot.child("cus_phone").getValue().toString();
 
-                customerDetailName1.setText(" Customer_Name      :  " + customerDetailName);
-                customerDetailEmail1.setText(" Customer_Email       :  " + customerDetailEmail);
-                customerPhone1.setText(" Customer_Phone     :  " + customerDetailPhone);
+                customerDetailName1.setText(" Customer's Name      :  " + customerDetailName);
+                customerDetailEmail1.setText(" Customer's Email       :  " + customerDetailEmail);
+                customerPhone1.setText(" Customer's Phone     :  " + customerDetailPhone);
 
             }
 

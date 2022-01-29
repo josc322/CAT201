@@ -73,19 +73,17 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             return;
         }
 
-        progressDialog.setMessage("Logging Please Wait...");
+        progressDialog.setMessage("Logging In, Please Wait...");
         progressDialog.show();
 
         firebaseAuth.signInWithEmailAndPassword(email,password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-//                        progressDialog.dismiss();
 
                         if(task.isSuccessful()){
                             finish();
                             startActivity(new Intent(getApplicationContext(),NavigationActivity.class));
-                            //Toast.makeText(LoginActivity.this,"Logged ",Toast.LENGTH_SHORT).show();
                         }
                         else {
                             Toast.makeText(LoginActivity.this,"Login Failed",Toast.LENGTH_SHORT).show();
