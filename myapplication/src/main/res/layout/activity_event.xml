@@ -4,44 +4,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.airline.myapplication.EventActivity">
+    tools:context=".EventActivity">
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@drawable/destop">
+        android:background="@drawable/purple_background">
 
         <TextView
-            android:id="@+id/textViefw"
+            android:id="@+id/airlineName3"
             android:layout_width="match_parent"
-            android:layout_margin="10dp"
-            android:layout_height="60dp"
-            android:textSize="25dp"
-            android:textStyle="bold"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:background="#040273"
             android:gravity="center"
-            android:textColor="@color/dargray"
-            android:background="@color/white"
+            android:text="MAS AIRLINES"
             android:textAlignment="center"
-            android:text="SHANA TRAVELS"
-            android:layout_marginTop="10dp"/>
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_margin="15dp"
-            android:src="@drawable/sureka" />
+            android:src="@drawable/airplane2" />
 
         <RatingBar
             android:id="@+id/ratingBar"
-            android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_margin="30dp"
             android:numStars="5"
-            android:stepSize="0.5"
-            android:rating="3" />
+            android:progressBackgroundTint="#808080"
+            android:progressTint="#FFC107"
+            android:rating="3"
+            android:secondaryProgressTint="#FFC107"
+            android:stepSize="0.5" />
 
 
         <Button
@@ -53,7 +57,8 @@
             android:layout_marginTop="15dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:background="@color/i"/>
+            android:textColor="@color/white"
+            android:background="@drawable/button"/>
 
 
     </LinearLayout>

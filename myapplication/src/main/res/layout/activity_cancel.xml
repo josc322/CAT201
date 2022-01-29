@@ -4,19 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/_3"
-    tools:context="com.example.myapplication.DetailActivity">
+    android:background="@drawable/purple_background"
+    tools:context=".DetailActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
-        <!--<ImageView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="120dp"-->
-        <!--android:src="@drawable/icone2"-->
-        <!--android:layout_marginTop="10dp"/>-->
 
         <TextView
             android:id="@+id/airlineDetailName1"
@@ -31,12 +25,28 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:textAlignment="center"
-            android:background="@color/purple_200"/>
+            android:background="#9867c5"
+            android:fontFamily="serif" />
+         <TextView
+            android:id="@+id/airlineNumber1"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/white"/>
+        <TextView
+            android:id="@+id/airlineCabinClass1"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/white"/>
         <TextView
             android:id="@+id/airlineDetailDate1"
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:text="MH370: 03/02/2022 "
             android:textSize="20dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
@@ -48,25 +58,14 @@
             android:textSize="20dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:text="No Booking Data......"
             android:background="@color/white"/>
         <TextView
             android:id="@+id/airlineDetailTo1"
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:text="No Booking Data......"
             android:textSize="20dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:background="@color/white"/>
-        <TextView
-            android:id="@+id/airlineDetailCondition1"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:textSize="20dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:text="No Booking Data......"
             android:background="@color/white"/>
 
 
@@ -80,10 +79,11 @@
             android:textStyle="bold"
             android:gravity="center"
             android:textColor="@color/white"
-            android:background="@color/purple_200"
+            android:background="#9867c5"
             android:textAlignment="center"
-            android:text="Booking Detail"
-            android:layout_marginTop="20dp"/>
+            android:text="Destination Detail"
+            android:layout_marginTop="20dp"
+            android:fontFamily="serif"/>
 
         <TextView
             android:id="@+id/bookingDetailFrom1"
@@ -92,7 +92,7 @@
             android:textSize="20dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:text="MH370: Penang - Malacca"
+            android:text="No Booking Data..."
             android:background="@color/white"/>
         <TextView
             android:id="@+id/bookingDetailTo1"
@@ -101,7 +101,7 @@
             android:textSize="20dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:text="No Booking Data......"
+            android:text="No Booking Data..."
             android:background="@color/white"/>
 
         <TextView
@@ -114,10 +114,11 @@
             android:textStyle="bold"
             android:gravity="center"
             android:textColor="@color/white"
-            android:background="@color/purple_200"
+            android:background="#9867c5"
             android:textAlignment="center"
             android:text="Ticket Detail"
-            android:layout_marginTop="20dp"/>
+            android:fontFamily="serif"
+            android:layout_marginTop="20dp" />
 
         <TextView
             android:id="@+id/ticketDetailNumber1"
@@ -147,9 +148,10 @@
             android:textStyle="bold"
             android:gravity="center"
             android:textColor="@color/white"
-            android:background="@color/purple_200"
+            android:background="#9867c5"
             android:textAlignment="center"
             android:text="Customer Detail"
+            android:fontFamily="serif"
             android:layout_marginTop="20dp"/>
 
         <TextView
@@ -164,8 +166,8 @@
         <TextView
             android:id="@+id/customerDetailEmail1"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
             android:textSize="20dp"
+            android:layout_height="61dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:text="No Booking Data......"
@@ -184,16 +186,16 @@
             android:id="@+id/cancelBooking"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/background14"
-            android:ems="10"
-            android:fontFamily="serif"
-            android:textAlignment="center"
-            android:layout_marginRight="30dp"
             android:layout_marginLeft="30dp"
-            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/cancel_button"
+            android:ems="10"
+            android:text="CANCEL FLIGHT"
+            android:textColor="@color/white"
+            android:textAlignment="center"
             android:textSize="20sp"
-            android:text="Cancel Booking" />
+            android:textStyle="bold" />
 
     </LinearLayout>
 

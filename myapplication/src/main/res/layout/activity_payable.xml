@@ -10,10 +10,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@drawable/_3">
+        android:background="@drawable/purple_background">
 
         <TextView
-            android:id="@+id/textView11"
+            android:id="@+id/airlineName2"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:textStyle="bold"
@@ -22,25 +22,25 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:textAlignment="center"
-            android:background="@color/white"/>
+            android:textColor="@color/white"/>
         <TextView
-            android:id="@+id/textView21"
+            android:id="@+id/airlineDate2"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:textSize="20dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:textAlignment="center"
-            android:background="@color/white"/>
+            android:textColor="@color/white"/>
         <TextView
-            android:id="@+id/textView31"
+            android:id="@+id/airlineCabinClass2"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:textAlignment="center"
             android:textSize="20dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:background="@color/white"/>
+            android:textColor="@color/white"/>
 
         <ImageView
             android:layout_width="match_parent"
@@ -56,7 +56,7 @@
             android:textSize="20dp"
             android:textStyle="bold"
             android:gravity="center"
-            android:textColor="@color/colorPrimary"
+            android:textColor="#3F51B5"
             android:background="@color/white"
             android:textAlignment="center"
             android:text="Number Of Seats : 2"
@@ -70,22 +70,23 @@
             android:textSize="20dp"
             android:textStyle="bold"
             android:gravity="center"
-            android:textColor="@color/colorAccent"
+            android:textColor="#ed1162"
             android:background="@color/white"
             android:textAlignment="center"
             android:text="Payable RM 100.00"
             android:layout_marginTop="10dp"/>
 
         <Button
-            android:id="@+id/btnPay"
+            android:id="@+id/payButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="15dp"
             android:layout_marginRight="20dp"
-            android:background="@drawable/back2"
+            android:background="@drawable/button"
             android:text="Pay"
-            android:textSize="25dp" />
+            android:textSize="25dp"
+            android:textColor="@color/white"/>
     </LinearLayout>
 
 </RelativeLayout>

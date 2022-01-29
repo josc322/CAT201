@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/_3"
+    android:background="@drawable/purple_background"
     android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".SeatActivity">
@@ -44,7 +44,7 @@
                 android:textSize="20sp"
                 android:text="1"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -75,7 +75,7 @@
                 android:textSize="20sp"
                 android:text="2"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -106,7 +106,7 @@
                 android:textSize="20sp"
                 android:text="3"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -136,7 +136,7 @@
                 android:textSize="20sp"
                 android:text="4"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -167,7 +167,7 @@
                 android:textSize="20sp"
                 android:text="5"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -197,7 +197,7 @@
                 android:textSize="20sp"
                 android:text="6"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -227,7 +227,7 @@
                 android:textSize="20sp"
                 android:text="7"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -258,7 +258,7 @@
                 android:textSize="20sp"
                 android:text="8"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -289,7 +289,7 @@
                 android:textSize="20sp"
                 android:text="9"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -319,7 +319,7 @@
                 android:textSize="20sp"
                 android:text="10"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -350,7 +350,7 @@
                 android:textSize="20sp"
                 android:text="11"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
 
                 android:textStyle="bold" />
 
@@ -376,12 +376,12 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="17dp"
                 android:layout_gravity="center"
-                android:textSize="20sp"
                 android:text="12"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -411,7 +411,7 @@
                 android:textSize="20sp"
                 android:text="13"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
 
                 android:textStyle="bold" />
 
@@ -443,7 +443,7 @@
                 android:textSize="20sp"
                 android:text="14"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
 
                 android:textStyle="bold" />
 
@@ -475,7 +475,7 @@
                 android:textSize="20sp"
                 android:text="15"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -505,7 +505,7 @@
                 android:textSize="20sp"
                 android:text="16"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -536,7 +536,7 @@
                 android:textSize="20sp"
                 android:text="17"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -566,7 +566,7 @@
                 android:textSize="20sp"
                 android:text="18"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -596,7 +596,7 @@
                 android:textSize="20sp"
                 android:text="19"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -627,7 +627,7 @@
                 android:textSize="20sp"
                 android:text="20"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -658,7 +658,7 @@
                 android:textSize="20sp"
                 android:text="21"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -688,7 +688,7 @@
                 android:textSize="20sp"
                 android:text="22"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -719,7 +719,7 @@
                 android:textSize="20sp"
                 android:text="23"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -749,7 +749,7 @@
                 android:textSize="20sp"
                 android:text="24"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -779,7 +779,7 @@
                 android:textSize="20sp"
                 android:text="25"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -810,7 +810,7 @@
                 android:textSize="20sp"
                 android:text="26"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -841,7 +841,7 @@
                 android:textSize="20sp"
                 android:text="27"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -871,7 +871,7 @@
                 android:textSize="20sp"
                 android:text="28"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -902,7 +902,7 @@
                 android:textSize="20sp"
                 android:text="29"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -932,7 +932,7 @@
                 android:textSize="20sp"
                 android:text="30"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -962,7 +962,7 @@
                 android:textSize="20sp"
                 android:text="31"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -993,7 +993,7 @@
                 android:textSize="20sp"
                 android:text="32"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -1024,7 +1024,7 @@
                 android:textSize="20sp"
                 android:text="33"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -1054,7 +1054,7 @@
                 android:textSize="20sp"
                 android:text="34"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -1085,7 +1085,7 @@
                 android:textSize="20sp"
                 android:text="35"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -1115,7 +1115,7 @@
                 android:textSize="20sp"
                 android:text="36"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -1145,7 +1145,7 @@
                 android:textSize="20sp"
                 android:text="37"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -1176,7 +1176,7 @@
                 android:textSize="20sp"
                 android:text="38"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -1207,7 +1207,7 @@
                 android:textSize="20sp"
                 android:text="39"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -1237,7 +1237,7 @@
                 android:textSize="20sp"
                 android:text="40"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -1268,7 +1268,7 @@
                 android:textSize="20sp"
                 android:text="41"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -1298,7 +1298,7 @@
                 android:textSize="20sp"
                 android:text="42"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -1328,7 +1328,7 @@
                 android:textSize="20sp"
                 android:text="43"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -1359,7 +1359,7 @@
                 android:textSize="20sp"
                 android:text="44"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -1390,7 +1390,7 @@
                 android:textSize="20sp"
                 android:text="45"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#303F9F"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -1449,12 +1449,12 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="6dp"
-        android:background="@drawable/background"
+        android:background="@drawable/button"
         android:ems="10"
-        android:fontFamily="serif"
         android:textAlignment="center"
         android:textStyle="bold"
         android:textSize="20sp"
-        android:text="CONFIRM" />
+        android:text="CONFIRM"
+        android:textColor="@color/white"/>
 
 </LinearLayout>

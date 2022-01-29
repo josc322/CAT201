@@ -10,7 +10,7 @@
         android:layout_margin="3dp">
 
         <ImageView
-            android:id="@+id/busImage"
+            android:id="@+id/airlineImage"
             android:layout_width="132dp"
             android:layout_height="150dp"
             app:srcCompat="@drawable/airplane" />

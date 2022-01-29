@@ -14,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Setting"
-            android:background="@drawable/destop"
+            android:background="@drawable/purple_background"
             android:textSize="50sp"/>
     </LinearLayout>
 
