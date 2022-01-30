@@ -52,7 +52,7 @@ public class PayActivity extends AppCompatActivity {
                 Intent intent=new Intent(PayActivity.this,CreditActivity.class);
                 intent.putExtra("NAME_AIRLINE",nameAirline);
                 intent.putExtra("DATE_AIRLINE",dateAirline);
-                intent.putExtra("CONDITION_AIRLINE",cabinClassAirline);
+                intent.putExtra("CABINCLASS_AIRLINE",cabinClassAirline);
                 startActivity(intent);
             }
         });
@@ -63,7 +63,7 @@ public class PayActivity extends AppCompatActivity {
                 Intent intent=new Intent(PayActivity.this,CreditActivity.class);
                 intent.putExtra("NAME_AIRLINE",nameAirline);
                 intent.putExtra("DATE_AIRLINE",dateAirline);
-                intent.putExtra("CONDITION_AIRLINE",cabinClassAirline);
+                intent.putExtra("CABINCLASS_AIRLINE",cabinClassAirline);
                 startActivity(intent);
             }
         });
@@ -74,7 +74,7 @@ public class PayActivity extends AppCompatActivity {
                 Intent intent=new Intent(PayActivity.this,CreditActivity.class);
                 intent.putExtra("NAME_AIRLINE",nameAirline);
                 intent.putExtra("DATE_AIRLINE",dateAirline);
-                intent.putExtra("CONDITION_AIRLINE",cabinClassAirline);
+                intent.putExtra("CABINCLASS_AIRLINE",cabinClassAirline);
                 startActivity(intent);
             }
         });
@@ -85,10 +85,9 @@ public class PayActivity extends AppCompatActivity {
                 Intent intent=new Intent(PayActivity.this,CreditActivity.class);
                 intent.putExtra("NAME_AIRLINE",nameAirline);
                 intent.putExtra("DATE_AIRLINE",dateAirline);
-                intent.putExtra("CONDITION_AIRLINE",cabinClassAirline);
+                intent.putExtra("CABINCLASS_AIRLINE",cabinClassAirline);
                 startActivity(intent);
             }
         });
 
     }
-}
