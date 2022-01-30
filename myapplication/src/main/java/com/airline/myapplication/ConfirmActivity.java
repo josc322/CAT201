@@ -68,17 +68,17 @@ public class ConfirmActivity extends AppCompatActivity implements View.OnClickLi
             return;
         }
         if(TextUtils.isEmpty(customerName)){
-            //password is empty
+            //customer name is empty
             Toast.makeText(this,"Please enter the customer name",Toast.LENGTH_SHORT).show();
             return;
         }
         if(TextUtils.isEmpty(customerAge)){
-            //password is empty
+            //customer age is empty
             Toast.makeText(this,"Please enter the customer age",Toast.LENGTH_SHORT).show();
             return;
         }
 
-        CustomerDetail customerDetail=new CustomerDetail(customerEmail,customerPhone,customerName,customerAge);
+        CustomerDetail customerDetail = new CustomerDetail(customerEmail,customerPhone,customerName,customerAge);
 
         FirebaseUser user=firebaseAuth.getCurrentUser();
         databaseReference.child(user.getUid()).child("CustomerDetails").setValue(customerDetail);
@@ -89,12 +89,11 @@ public class ConfirmActivity extends AppCompatActivity implements View.OnClickLi
         startActivity(intent);
         progressDialog.dismiss();
     }
-    
+
     @Override
     public void onClick(View view) {
         if (view == confirmBook) {
             contactBook();
         }
     }
-
 }
