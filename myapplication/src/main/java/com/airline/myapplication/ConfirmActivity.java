@@ -18,7 +18,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class ConfirmActivity extends AppCompatActivity implements View.OnClickListener {
     private DatabaseReference databaseReference;
     private FirebaseAuth firebaseAuth;
-    private EditText emailId;
+    private EditText email;
     private EditText phoneNumber;
     private EditText nameCustomer;
     private EditText ageCustomer;
@@ -30,13 +30,13 @@ public class ConfirmActivity extends AppCompatActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirm);
 
-        emailId=(EditText)findViewById(R.id.editTextEmail);
-        phoneNumber=(EditText)findViewById(R.id.editTextPhoneNumber);
-        nameCustomer=(EditText)findViewById(R.id.editTextName);
-        ageCustomer=(EditText)findViewById(R.id.editTextAge);
-        confirmBook=(Button)findViewById(R.id.btnBook);
+        email = (EditText)findViewById(R.id.editTextEmail);
+        phoneNumber = (EditText)findViewById(R.id.editTextPhoneNumber);
+        nameCustomer = (EditText)findViewById(R.id.editTextName);
+        ageCustomer = (EditText)findViewById(R.id.editTextAge);
+        confirmBook = (Button)findViewById(R.id.btnBook);
 
-        progressDialog=new ProgressDialog(this);
+        progressDialog = new ProgressDialog(this);
         confirmBook.setOnClickListener(this);
         databaseReference= FirebaseDatabase.getInstance().getReference();
 
@@ -48,41 +48,40 @@ public class ConfirmActivity extends AppCompatActivity implements View.OnClickLi
     }
     private void contactBook(){
 
-        String cus_email=emailId.getText().toString().trim();
-        String cus_phone=phoneNumber.getText().toString().trim();
-        String cus_name=nameCustomer.getText().toString().trim();
-        String cus_age=ageCustomer.getText().toString().trim();
+        String customerEmail = email.getText().toString().trim();
+        String customerPhone = phoneNumber.getText().toString().trim();
+        String customerName = nameCustomer.getText().toString().trim();
+        String customerAge = ageCustomer.getText().toString().trim();
 
         final String nameAirline=getIntent().getStringExtra("NAME_AIRLINE");
         final String dateAirline=getIntent().getStringExtra("DATE_AIRLINE");
         final String conditionAirline=getIntent().getStringExtra("CONDITION_AIRLINE");
 
-        if(TextUtils.isEmpty(cus_email)){
+        if(TextUtils.isEmpty(customerEmail)){
             //email is empty
             Toast.makeText(this,"Please enter the email",Toast.LENGTH_SHORT).show();
             return;
         }
-        if(TextUtils.isEmpty(cus_phone)){
+        if(TextUtils.isEmpty(customerPhone)){
             //password is empty
             Toast.makeText(this,"Please enter the phone number",Toast.LENGTH_SHORT).show();
             return;
         }
-        if(TextUtils.isEmpty(cus_name)){
+        if(TextUtils.isEmpty(customerName)){
             //password is empty
             Toast.makeText(this,"Please enter the customer name",Toast.LENGTH_SHORT).show();
             return;
         }
-        if(TextUtils.isEmpty(cus_age)){
+        if(TextUtils.isEmpty(customerAge)){
             //password is empty
             Toast.makeText(this,"Please enter the customer age",Toast.LENGTH_SHORT).show();
             return;
         }
 
-        CustomerDetail customerDetail=new CustomerDetail(cus_email,cus_phone,cus_name,cus_age);
+        CustomerDetail customerDetail=new CustomerDetail(customerEmail,customerPhone,customerName,customerAge);
 
         FirebaseUser user=firebaseAuth.getCurrentUser();
         databaseReference.child(user.getUid()).child("CustomerDetails").setValue(customerDetail);
-        //child("bookings").child(userId);
         progressDialog.setMessage("Updating Contact Detail Please Wait...");
         progressDialog.show();
 
@@ -90,6 +89,7 @@ public class ConfirmActivity extends AppCompatActivity implements View.OnClickLi
         startActivity(intent);
         progressDialog.dismiss();
     }
+    
     @Override
     public void onClick(View view) {
         if (view == confirmBook) {
