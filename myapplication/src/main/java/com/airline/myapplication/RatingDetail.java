@@ -1,10 +1,10 @@
 package com.airline.myapplication;
 
 public class RatingDetail {
-    public String ratingNumber;
+    public String ratingStar;
 
-    public RatingDetail(String ratingNumber) {
-        this.ratingNumber = ratingNumber;
+    public RatingDetail(String ratingStar) {
+        this.ratingStar = ratingStar;
     }
 
 }
