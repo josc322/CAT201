@@ -8,7 +8,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class PayActivity extends AppCompatActivity {
-    private Button buttonOffer;
     private Button buttonCredit;
     private Button buttonDebit;
     private Button buttonOnlineBanking;
