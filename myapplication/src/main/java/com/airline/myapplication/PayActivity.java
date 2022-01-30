@@ -14,7 +14,7 @@ public class PayActivity extends AppCompatActivity {
     private Button buttonOnlineBanking;
     private Button buttonEWallet;
     private TextView textViewTotal;
-    private TextView a,b,c;
+    private TextView airlineName,airlineDate,airlineCabinClass;
 
 
     @Override
@@ -30,18 +30,18 @@ public class PayActivity extends AppCompatActivity {
         buttonOnlineBanking = (Button) findViewById(R.id.buttonOnlineBanking);
         buttonEWallet = (Button) findViewById(R.id.buttonEWallet);
 
-        textViewTotal=(TextView)findViewById(R.id.textViewTotal);
-        a=(TextView)findViewById(R.id.textView1);
-        b=(TextView)findViewById(R.id.textView2);
-        c=(TextView)findViewById(R.id.textView3);
+        textViewTotal=(TextView)findViewById(R.id.textViewTotal);  
+        airlineName = (TextView)findViewById(R.id.textView1); 
+        airlineDate = (TextView)findViewById(R.id.textView2);
+        airlineCabinClass = (TextView)findViewById(R.id.textView3);
 
-        final String nameAirline=getIntent().getStringExtra("NAME_AIRLINE");
-        final String dateAirline=getIntent().getStringExtra("DATE_AIRLINE");
-        final String cabinClassAirline=getIntent().getStringExtra("CABINCLASS_AIRLINE");
+        final String nameAirline = getIntent().getStringExtra("NAME_AIRLINE");
+        final String dateAirline = getIntent().getStringExtra("DATE_AIRLINE");
+        final String cabinClassAirline = getIntent().getStringExtra("CABINCLASS_AIRLINE");
 
-        a.setText(nameAirline);
-        b.setText(dateAirline);
-        c.setText(cabinClassAirline);
+        airlineName.setText(nameAirline);
+        airlineDate.setText(dateAirline);
+        airlineCabinClass.setText(cabinClassAirline);
 
         String total=getIntent().getStringExtra("TOTALCOSTI");
         textViewTotal.setText(total);
@@ -49,7 +49,7 @@ public class PayActivity extends AppCompatActivity {
         buttonCredit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(PayActivity.this,CreditActivity.class);
+                Intent intent=new Intent(PayActivity.this, CreditActivity.class);
                 intent.putExtra("NAME_AIRLINE",nameAirline);
                 intent.putExtra("DATE_AIRLINE",dateAirline);
                 intent.putExtra("CABINCLASS_AIRLINE",cabinClassAirline);
@@ -60,7 +60,7 @@ public class PayActivity extends AppCompatActivity {
         buttonDebit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(PayActivity.this,CreditActivity.class);
+                Intent intent=new Intent(PayActivity.this, CreditActivity.class);
                 intent.putExtra("NAME_AIRLINE",nameAirline);
                 intent.putExtra("DATE_AIRLINE",dateAirline);
                 intent.putExtra("CABINCLASS_AIRLINE",cabinClassAirline);
@@ -71,7 +71,7 @@ public class PayActivity extends AppCompatActivity {
         buttonOnlineBanking.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(PayActivity.this,CreditActivity.class);
+                Intent intent=new Intent(PayActivity.this, CreditActivity.class);
                 intent.putExtra("NAME_AIRLINE",nameAirline);
                 intent.putExtra("DATE_AIRLINE",dateAirline);
                 intent.putExtra("CABINCLASS_AIRLINE",cabinClassAirline);
@@ -91,3 +91,4 @@ public class PayActivity extends AppCompatActivity {
         });
 
     }
+}
