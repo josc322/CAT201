@@ -19,8 +19,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         if(hasConnection(MainActivity.this)) {
-            //call methods
-            //getJsonData();
             startActivity(new Intent(getApplicationContext(),LoginActivity.class));
         } else {
             showNetDisabledAlertToUser(MainActivity.this);
