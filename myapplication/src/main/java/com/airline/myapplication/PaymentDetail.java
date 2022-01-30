@@ -1,14 +1,14 @@
 package com.airline.myapplication;
 
 public class PaymentDetail {
-    public String total_cost;
-    public String total_seats;
-
-    public PaymentDetail(String total_cost, String total_seats) {
-        this.total_cost = total_cost;
-        this.total_seats = total_seats;
-    }
+    public String totalCost;
+    public String totalSeats;
 
     public PaymentDetail() {
+    }
+    
+    public PaymentDetail(String totalCost, String totalSeats) {
+        this.totalCost = totalCost;
+        this.totalSeats = totalSeats;
     }
 }
