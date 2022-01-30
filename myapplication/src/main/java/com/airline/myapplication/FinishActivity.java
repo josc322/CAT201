@@ -1,11 +1,7 @@
 package com.airline.myapplication;
 
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.content.Context;
 import android.content.Intent;
 import androidx.annotation.NonNull;
-import androidx.core.app.NotificationCompat;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,11 +14,11 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
+import com.google.firebase.database.ValueEventListener; 
+ 
 public class FinishActivity extends AppCompatActivity {
     private Button buttonHome;
-    private TextView a,b,c;
+    private TextView airlineName,airlineDate,airlineCabinClass; 
     private DatabaseReference databaseReference;
     private FirebaseAuth firebaseAuth;
     @Override
@@ -33,10 +29,10 @@ public class FinishActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Booking  Finished");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        a=(TextView)findViewById(R.id.airlineName2);
-        b=(TextView)findViewById(R.id.airlineDate2);
-        c=(TextView)findViewById(R.id.airlineCabinClass2);
-        buttonHome=(Button)findViewById(R.id.btnHome);
+        airlineName = (TextView)findViewById(R.id.airlineName2);
+        airlineDate = (TextView)findViewById(R.id.airlineDate2);
+        airlineCabinClass = (TextView)findViewById(R.id.airlineCabinClass2);
+        buttonHome = (Button)findViewById(R.id.btnHome);
 
         firebaseAuth = FirebaseAuth.getInstance();
 
@@ -50,9 +46,9 @@ public class FinishActivity extends AppCompatActivity {
                 String airlineDetailDate=dataSnapshot.child("date").getValue().toString();
                 String airlineDetailCabinClass=dataSnapshot.child("cabinClass").getValue().toString();
 
-                a.setText(airlineDetailName);
-                b.setText(airlineDetailDate);
-                c.setText(airlineDetailCabinClass);
+                airlineName.setText(airlineDetailName);
+                airlineDate.setText(airlineDetailDate);
+                airlineCabinClass.setText(airlineDetailCabinClass);
             }
 
             @Override
@@ -64,7 +60,7 @@ public class FinishActivity extends AppCompatActivity {
         buttonHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String message="Your Ticket Booking Success";
+                String message = "You have successfully booked your ticket!";
                 startActivity(new Intent(getApplicationContext(), NavigationActivity.class));
             }
         });
