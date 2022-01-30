@@ -60,12 +60,12 @@ public class CreditActivity extends AppCompatActivity implements View.OnClickLis
         String cvvNumber = editTextCvvNumber.getText().toString().trim();
         String cardName = editTextCardName.getText().toString().trim();
 
-        final String nameAirline=getIntent().getStringExtra("NAME_AIRLINE");
-        final String dateAirline=getIntent().getStringExtra("DATE_AIRLINE");
-        final String conditionAirline=getIntent().getStringExtra("CONDITION_AIRLINE");
+        final String nameAirline = getIntent().getStringExtra("NAME_AIRLINE");
+        final String dateAirline = getIntent().getStringExtra("DATE_AIRLINE");
+        final String cabinclassAirline = getIntent().getStringExtra("CABINCLASS_AIRLINE");
 
         if (TextUtils.isEmpty(cardNumber)) {
-            //cardNumber is empty
+            //cardNumber is empty 
             Toast.makeText(this, "Please Enter The Card Number", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -95,7 +95,7 @@ public class CreditActivity extends AppCompatActivity implements View.OnClickLis
         Intent intent=new Intent(CreditActivity.this,ConfirmActivity.class);
         intent.putExtra("NAME_AIRLINE",nameAirline);
         intent.putExtra("DATE_AIRLINE",dateAirline);
-        intent.putExtra("CONDITION_AIRLINE",conditionAirline);
+        intent.putExtra("CABINCLASS_AIRLINE",cabinclassAirline);
         startActivity(intent);
     }
 
