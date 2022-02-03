@@ -106,8 +106,8 @@ public class CancelActivity extends AppCompatActivity {
         databaseReference3.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String ticketDetailNumber=dataSnapshot.child("total_seats").getValue().toString();
-                String ticketDetailPrice=dataSnapshot.child("total_cost").getValue().toString();
+                String ticketDetailNumber=dataSnapshot.child("totalSeats").getValue().toString();
+                String ticketDetailPrice=dataSnapshot.child("totalCost").getValue().toString();
 
                 ticketDetailNumber1.setText(" Number of Seats    :  "+ticketDetailNumber);
                 ticketDetailPrice1.setText(" Total Cost                :  "+ticketDetailPrice);
@@ -123,9 +123,9 @@ public class CancelActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                String customerDetailName = dataSnapshot.child("cus_name").getValue().toString();
-                String customerDetailEmail = dataSnapshot.child("cus_email").getValue().toString();
-                String customerDetailPhone = dataSnapshot.child("cus_phone").getValue().toString();
+                String customerDetailName = dataSnapshot.child("customerName").getValue().toString();
+                String customerDetailEmail = dataSnapshot.child("customerEmail").getValue().toString();
+                String customerDetailPhone = dataSnapshot.child("customerPhone").getValue().toString();
 
                 customerDetailName1.setText(" Customer's Name      :  " + customerDetailName);
                 customerDetailEmail1.setText(" Customer's Email       :  " + customerDetailEmail);
